@@ -7,20 +7,58 @@ import { ArrowLeft, ArrowRight, Calendar } from "lucide-react";
 export default function NewsSection() {
   const [articles, setArticles] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
+    setLoading(true);
     api.articles.getAll()
       .then(data => {
         console.log('Articles loaded:', data);
-        setArticles(data.slice(0, 9));
+        if (data && data.length > 0) {
+          setArticles(data.slice(0, 9));
+        } else {
+          console.warn('No articles returned from API');
+        }
+        setLoading(false);
       })
       .catch(err => {
         console.error('Failed to load articles:', err);
+        setError(err.message);
+        setLoading(false);
       });
   }, []);
 
-  if (!articles.length) {
-    console.log('No articles to display');
+  // Show loading state
+  if (loading) {
+    return (
+      <section dir="rtl" className="pt-6 pb-12 lg:pt-8 lg:pb-16 bg-secondary/40" id="news">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="text-center py-12">
+            <div className="inline-block w-8 h-8 border-4 border-accent border-t-transparent rounded-full animate-spin"></div>
+            <p className="mt-4 text-sm text-muted-foreground">جاري تحميل الأخبار...</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  // Show error state
+  if (error) {
+    return (
+      <section dir="rtl" className="pt-6 pb-12 lg:pt-8 lg:pb-16 bg-secondary/40" id="news">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="text-center py-12">
+            <p className="text-sm text-red-500">حدث خطأ في تحميل الأخبار: {error}</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  // Don't render if no articles
+  if (!articles || articles.length === 0) {
+    console.log('No articles to display - component will not render');
     return null;
   }
 
