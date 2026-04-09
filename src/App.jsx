@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
+import ScrollToTop from './components/ScrollToTop';
 import Layout from './components/layout/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -36,27 +37,30 @@ const AuthenticatedApp = () => {
 
   // Render the main app
   return (
-    <Routes>
-      <Route element={<Layout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/nomadas-digitales" element={<NomadasDigitales />} />
-        <Route path="/non-lucrativa" element={<NonLucrativa />} />
-        <Route path="/arraigo-sociolaboral" element={<ArraigoSociolaboral />} />
-        <Route path="/regularizacion-excepcional" element={<RegularizacionExcepcional />} />
-        <Route path="/article/:id" element={<Article />} />
-        <Route path="*" element={<PageNotFound />} />
-      </Route>
-      <Route path="/admin/login" element={<Login />} />
-      <Route path="/admin" element={<ProtectedRoute><AdminLayout /></ProtectedRoute>}>
-        <Route index element={<Dashboard />} />
-        <Route path="articles" element={<Articles />} />
-        <Route path="testimonials" element={<Testimonials />} />
-        <Route path="submissions" element={<Submissions />} />
-        <Route path="settings" element={<AdminSettings />} />
-      </Route>
-    </Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/nomadas-digitales" element={<NomadasDigitales />} />
+          <Route path="/non-lucrativa" element={<NonLucrativa />} />
+          <Route path="/arraigo-sociolaboral" element={<ArraigoSociolaboral />} />
+          <Route path="/regularizacion-excepcional" element={<RegularizacionExcepcional />} />
+          <Route path="/article/:id" element={<Article />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Route>
+        <Route path="/admin/login" element={<Login />} />
+        <Route path="/admin" element={<ProtectedRoute><AdminLayout /></ProtectedRoute>}>
+          <Route index element={<Dashboard />} />
+          <Route path="articles" element={<Articles />} />
+          <Route path="testimonials" element={<Testimonials />} />
+          <Route path="submissions" element={<Submissions />} />
+          <Route path="settings" element={<AdminSettings />} />
+        </Route>
+      </Routes>
+    </>
   );
 };
 

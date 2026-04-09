@@ -66,8 +66,8 @@ export default function HeroSection() {
           {/* Eyebrow */}
           <div className="flex items-center gap-4 mb-7">
             <div className="w-8 h-[1px] bg-accent" />
-            <span className="text-[11px] font-cairo tracking-[5px] uppercase text-accent font-medium">
-              CrossWorld Spain Services
+            <span className="text-[11px] font-cairo text-accent font-medium" style={{ letterSpacing: '0.3em' }}>
+              CROSSWORLD SPAIN SERVICES
             </span>
           </div>
 
@@ -105,19 +105,19 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          className="flex flex-wrap gap-0 border-t border-border/50 pt-10"
+          className="flex flex-col sm:flex-row flex-wrap gap-6 sm:gap-0 border-t border-border/50 pt-10"
         >
           {stats.map((stat, i) => (
             <div
               key={i}
               className={`flex-1 min-w-[140px] ${
-                i > 0 ? "border-r border-border/50 pr-8" : ""
-              } ${i < stats.length - 1 ? "pl-8" : ""}`}
+                i > 0 ? "sm:border-r border-border/50 sm:pr-8" : ""
+              } ${i < stats.length - 1 ? "sm:pl-8" : ""}`}
             >
               <div className="font-cairo text-2xl lg:text-3xl font-bold text-accent leading-none mb-2">
                 {stat.num}
               </div>
-              <div className="text-xs text-muted-foreground tracking-wide">
+              <div className="text-xs text-muted-foreground">
                 {stat.label}
               </div>
             </div>

@@ -6,7 +6,7 @@ export default function SectionHeader({ tag, title, description, center = false 
       <div dir="rtl" className={`mb-12 lg:mb-16 ${center ? "text-center" : ""}`}>
         <div className={`flex items-center gap-3 mb-4 ${center ? "justify-center" : ""}`}>
           <div className="w-8 h-[1px] bg-accent" />
-          <span className="text-[11px] font-cairo font-medium tracking-[4px] uppercase text-accent">
+          <span className="text-[11px] font-cairo font-medium text-accent">
             {tag}
           </span>
         </div>
