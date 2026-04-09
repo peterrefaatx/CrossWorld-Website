@@ -60,7 +60,7 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h4 className="font-changa text-sm font-semibold mb-5 text-white/80">تواصل</h4>
-            <div className="space-y-4">
+            <div className="space-y-4 mb-5">
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-accent" />
                 <span className="text-sm text-white/50" dir="ltr">Info.crossworldspain@gmail.com</span>
@@ -73,28 +73,27 @@ export default function Footer() {
                 <MapPin className="w-4 h-4 text-accent" />
                 <span className="text-sm text-white/50">Madrid, España</span>
               </div>
-              <div className="flex items-center gap-3">
-                <Facebook className="w-4 h-4 text-accent" />
-                <a 
-                  href="https://www.facebook.com/crossworldspain/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-sm text-white/50 hover:text-accent transition-colors"
-                >
-                  صفحتنا على فيسبوك
-                </a>
-              </div>
-              <div className="flex items-center gap-3">
-                <Users className="w-4 h-4 text-accent" />
-                <a 
-                  href="https://www.facebook.com/groups/808772868210091" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-sm text-white/50 hover:text-accent transition-colors"
-                >
-                  مجموعتنا على فيسبوك
-                </a>
-              </div>
+            </div>
+            {/* Social Media Icons */}
+            <div className="flex items-center gap-3">
+              <a 
+                href="https://www.facebook.com/crossworldspain/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full bg-white/10 hover:bg-accent flex items-center justify-center transition-all group"
+                aria-label="صفحتنا على فيسبوك"
+              >
+                <Facebook className="w-4 h-4 text-white/70 group-hover:text-white transition-colors" />
+              </a>
+              <a 
+                href="https://www.facebook.com/groups/808772868210091" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full bg-white/10 hover:bg-accent flex items-center justify-center transition-all group"
+                aria-label="مجموعتنا على فيسبوك"
+              >
+                <Users className="w-4 h-4 text-white/70 group-hover:text-white transition-colors" />
+              </a>
             </div>
           </div>
         </div>
