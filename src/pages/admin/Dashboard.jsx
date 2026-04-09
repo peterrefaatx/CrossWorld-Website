@@ -64,7 +64,7 @@ export default function Dashboard() {
     <div className="space-y-6">
       {/* Header */}
       <div>
-        <h1 className="text-2xl font-bold text-[#1c1c1e] tracking-tight">لوحة التحكم</h1>
+        <h1 className="text-2xl font-bold text-[#1c1c1e]">لوحة التحكم</h1>
         <p className="text-sm text-gray-400 mt-0.5">
           {new Date().toLocaleDateString("ar-SA", { weekday: "long", year: "numeric", month: "long", day: "numeric" })}
         </p>

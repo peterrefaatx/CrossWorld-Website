@@ -57,7 +57,7 @@ export default function Article() {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center gap-3 mb-6">
-              <span className="bg-accent text-white text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full">
+              <span className="bg-accent text-white text-xs font-bold uppercase px-4 py-2 rounded-full">
                 أخبار
               </span>
               <span className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -137,11 +137,11 @@ export default function Article() {
               <h3 className="font-changa text-sm font-bold text-primary mb-4 pb-3 border-b-2 border-accent">تواصل معنا</h3>
               <div className="space-y-3">
                 <div>
-                  <div className="text-[9px] font-bold tracking-[2px] uppercase text-accent mb-1">Whatsapp</div>
+                  <div className="text-[9px] font-bold uppercase text-accent mb-1">Whatsapp</div>
                   <div className="text-xs font-semibold text-primary text-right" dir="ltr">+34 604 811 874</div>
                 </div>
                 <div>
-                  <div className="text-[9px] font-bold tracking-[2px] uppercase text-accent mb-1">Email</div>
+                  <div className="text-[9px] font-bold uppercase text-accent mb-1">Email</div>
                   <div className="text-[11px] font-semibold text-primary text-right" dir="ltr">Info.crossworldspain@gmail.com</div>
                 </div>
               </div>

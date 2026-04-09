@@ -63,7 +63,7 @@ export default function NomadasDigitales() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-8 h-[1px] bg-accent" />
-              <span className="text-[11px] font-cairo tracking-[4px] uppercase text-accent font-medium">خدماتنا</span>
+              <span className="text-[11px] font-cairo uppercase text-accent font-medium">خدماتنا</span>
             </div>
             <h1 className="font-changa text-4xl lg:text-5xl font-bold text-primary leading-tight mb-4">
               تأشيرة الرحل <span className="text-accent">الرقميين</span>
@@ -146,7 +146,7 @@ export default function NomadasDigitales() {
               <div className="bg-accent/5 border border-accent/20 border-r-4 border-r-accent rounded-xl p-5">
                 <div className="flex items-center gap-2 mb-2">
                   <AlertTriangle className="w-4 h-4 text-accent" />
-                  <span className="text-[10px] font-bold tracking-[2px] uppercase text-accent">تنبيه قانوني — 2026</span>
+                  <span className="text-[10px] font-bold uppercase text-accent">تنبيه قانوني — 2026</span>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   تفرض الحكومة الإسبانية الآن بصرامة متطلب الدخل الشهري البالغ <strong className="text-primary">€2,849</strong> وشهادات التغطية الاجتماعية.
@@ -213,12 +213,12 @@ export default function NomadasDigitales() {
                   <h2 className="font-changa text-xl font-bold text-primary mb-5 pb-3 border-b-2 border-border">مسارا التقديم</h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="border border-border rounded-2xl p-6 border-t-4 border-t-accent">
-                      <span className="text-[10px] font-bold tracking-[2px] uppercase text-accent mb-2 block">المسار أ</span>
+                      <span className="text-[10px] font-bold uppercase text-accent mb-2 block">المسار أ</span>
                       <h4 className="font-changa text-base font-bold text-primary mb-2">عبر القنصلية (سنة واحدة)</h4>
                       <p className="text-sm text-muted-foreground leading-relaxed">يُقدَّم في القنصلية الإسبانية في بلدك. الأفضل لمن يريد راحة البال قبل السفر.</p>
                     </div>
                     <div className="border border-border rounded-2xl p-6 border-t-4 border-t-primary">
-                      <span className="text-[10px] font-bold tracking-[2px] uppercase text-primary mb-2 block">المسار ب</span>
+                      <span className="text-[10px] font-bold uppercase text-primary mb-2 block">المسار ب</span>
                       <h4 className="font-changa text-base font-bold text-primary mb-2">من داخل إسبانيا (3 سنوات)</h4>
                       <p className="text-sm text-muted-foreground leading-relaxed">الدخول كسائح والتقديم عبر بوابة UGE-CE. معالجة أسرع وإقامة 3 سنوات فورية.</p>
                     </div>
@@ -257,12 +257,12 @@ export default function NomadasDigitales() {
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="bg-secondary rounded-2xl p-6 border border-border">
-                      <span className="text-[10px] font-bold tracking-[2px] uppercase text-muted-foreground/50 block mb-3">مقيم عادي (IRPF)</span>
+                      <span className="text-[10px] font-bold uppercase text-muted-foreground/50 block mb-3">مقيم عادي (IRPF)</span>
                       <div className="font-cairo text-4xl font-bold text-primary mb-2">30-45%</div>
                       <p className="text-xs text-muted-foreground leading-relaxed">ضريبة تصاعدية على الدخل العالمي + ضريبة ثروة + نموذج 720</p>
                     </div>
                     <div className="bg-gradient-to-br from-primary to-primary/80 rounded-2xl p-6">
-                      <span className="text-[10px] font-bold tracking-[2px] uppercase text-accent block mb-3">قانون بيكهام (DNV)</span>
+                      <span className="text-[10px] font-bold uppercase text-accent block mb-3">قانون بيكهام (DNV)</span>
                       <div className="font-cairo text-4xl font-bold text-white mb-2">24%</div>
                       <p className="text-xs text-white/50 leading-relaxed">ضريبة ثابتة، إعفاء من الثروة، لا نموذج 720، مضمون 6 سنوات</p>
                     </div>
@@ -323,11 +323,11 @@ export default function NomadasDigitales() {
                 <h3 className="font-changa text-sm font-bold text-primary mb-4 pb-3 border-b-2 border-accent">تواصل معنا</h3>
                 <div className="space-y-3">
                   <div>
-                    <div className="text-[9px] font-bold tracking-[2px] uppercase text-accent mb-1">Whatsapp</div>
+                    <div className="text-[9px] font-bold uppercase text-accent mb-1">Whatsapp</div>
                     <div className="text-xs font-semibold text-primary text-right" dir="ltr">+34 604 811 874</div>
                   </div>
                   <div>
-                    <div className="text-[9px] font-bold tracking-[2px] uppercase text-accent mb-1">Email</div>
+                    <div className="text-[9px] font-bold uppercase text-accent mb-1">Email</div>
                     <div className="text-[11px] font-semibold text-primary text-right" dir="ltr">Info.crossworldspain@gmail.com</div>
                   </div>
                 </div>

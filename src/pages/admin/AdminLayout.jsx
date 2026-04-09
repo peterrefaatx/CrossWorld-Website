@@ -49,11 +49,11 @@ export default function AdminLayout() {
 
         {/* Nav */}
         <nav className="flex-1 px-3 space-y-0.5 overflow-y-auto">
-          <div className="text-[9px] font-semibold tracking-[2px] uppercase text-white/20 px-3 pb-2 pt-1">General</div>
+          <div className="text-[9px] font-semibold uppercase text-white/20 px-3 pb-2 pt-1">General</div>
           {filteredNavItems.slice(0, 1).map(item => <SideNavItem key={item.path} item={item} active={isActive(item)} onClick={() => setSidebarOpen(false)} />)}
-          <div className="text-[9px] font-semibold tracking-[2px] uppercase text-white/20 px-3 pb-2 pt-4">Content</div>
+          <div className="text-[9px] font-semibold uppercase text-white/20 px-3 pb-2 pt-4">Content</div>
           {filteredNavItems.slice(1, 4).map(item => <SideNavItem key={item.path} item={item} active={isActive(item)} onClick={() => setSidebarOpen(false)} />)}
-          <div className="text-[9px] font-semibold tracking-[2px] uppercase text-white/20 px-3 pb-2 pt-4">System</div>
+          <div className="text-[9px] font-semibold uppercase text-white/20 px-3 pb-2 pt-4">System</div>
           {filteredNavItems.slice(4).map(item => <SideNavItem key={item.path} item={item} active={isActive(item)} onClick={() => setSidebarOpen(false)} />)}
         </nav>
 

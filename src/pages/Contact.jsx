@@ -43,7 +43,7 @@ export default function Contact() {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="w-8 h-[1px] bg-accent" />
-              <span className="text-[11px] font-cairo tracking-[4px] uppercase text-accent font-medium">
+              <span className="text-[11px] font-cairo uppercase text-accent font-medium">
                 تواصل معنا
               </span>
             </div>
@@ -67,7 +67,7 @@ export default function Contact() {
                 <div className="mb-10">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-8 h-[1px] bg-accent" />
-                    <span className="text-[11px] font-cairo tracking-[4px] uppercase text-accent font-medium">
+                    <span className="text-[11px] font-cairo uppercase text-accent font-medium">
                       معلومات التواصل
                     </span>
                   </div>
@@ -84,7 +84,7 @@ export default function Contact() {
                         <c.icon className="w-5 h-5 text-accent" />
                       </div>
                       <div>
-                        <div className="text-[10px] font-bold tracking-[2px] uppercase text-accent mb-1">
+                        <div className="text-[10px] font-bold uppercase text-accent mb-1">
                           {c.label}
                         </div>
                         <div className="text-[15px] font-semibold text-primary text-right" dir={c.label !== "Location" ? "ltr" : "rtl"}>

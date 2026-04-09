@@ -77,7 +77,7 @@ export default function ServicesSection() {
                 )}
 
                 <div className="p-7 flex flex-col flex-1">
-                  <span className="text-[11px] font-cairo tracking-[3px] text-muted-foreground/50">
+                  <span className="text-[11px] font-cairo text-muted-foreground/50">
                     {s.num}
                   </span>
                   <h3 className="font-changa text-lg font-bold text-primary mt-3 mb-2 line-clamp-2">
@@ -92,7 +92,7 @@ export default function ServicesSection() {
                       <ArrowLeft className="w-3.5 h-3.5" />
                     </span>
                   ) : (
-                    <span className="inline-block text-[10px] font-semibold text-accent/60 border border-accent/20 px-3 py-1 rounded-full tracking-wider">
+                    <span className="inline-block text-[10px] font-semibold text-accent/60 border border-accent/20 px-3 py-1 rounded-full">
                       قريباً
                     </span>
                   )}

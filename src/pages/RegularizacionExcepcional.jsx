@@ -66,7 +66,7 @@ export default function RegularizacionExcepcional() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-8 h-[1px] bg-accent" />
-              <span className="text-[11px] font-cairo tracking-[4px] uppercase text-accent font-medium">خدماتنا</span>
+              <span className="text-[11px] font-cairo uppercase text-accent font-medium">خدماتنا</span>
             </div>
             <h1 className="font-changa text-4xl lg:text-5xl font-bold text-primary leading-tight mb-4">
               التسوية <span className="text-accent">الاستثنائية</span> في إسبانيا
@@ -148,7 +148,7 @@ export default function RegularizacionExcepcional() {
               <div className="bg-accent/5 border border-accent/20 border-r-4 border-r-accent rounded-xl p-5">
                 <div className="flex items-center gap-2 mb-2">
                   <AlertTriangle className="w-4 h-4 text-accent" />
-                  <span className="text-[10px] font-bold tracking-[2px] uppercase text-accent">تنبيه قانوني — 2026</span>
+                  <span className="text-[10px] font-bold uppercase text-accent">تنبيه قانوني — 2026</span>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-3">
                   حتى الآن، لم يتم الإعلان رسميًا عن تطبيق التسوية الاستثنائية لعام 2026، وكل ما يتم تداوله هو مقترحات أو مناقشات قانونية.
@@ -385,11 +385,11 @@ export default function RegularizacionExcepcional() {
                 <h3 className="font-changa text-sm font-bold text-primary mb-4 pb-3 border-b-2 border-accent">تواصل معنا</h3>
                 <div className="space-y-3">
                   <div>
-                    <div className="text-[9px] font-bold tracking-[2px] uppercase text-accent mb-1">Whatsapp</div>
+                    <div className="text-[9px] font-bold uppercase text-accent mb-1">Whatsapp</div>
                     <div className="text-xs font-semibold text-primary text-right" dir="ltr">+34 604 811 874</div>
                   </div>
                   <div>
-                    <div className="text-[9px] font-bold tracking-[2px] uppercase text-accent mb-1">Email</div>
+                    <div className="text-[9px] font-bold uppercase text-accent mb-1">Email</div>
                     <div className="text-[11px] font-semibold text-primary text-right" dir="ltr">Info.crossworldspain@gmail.com</div>
                   </div>
                 </div>

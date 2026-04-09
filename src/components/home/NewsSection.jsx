@@ -62,7 +62,7 @@ export default function NewsSection() {
             ref={trackRef}
             className="flex gap-5"
             animate={{ 
-              x: `${idx * (100 / perView)}%`
+              x: `-${idx * (100 / perView)}%`
             }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
           >
@@ -80,7 +80,7 @@ export default function NewsSection() {
                     <div className="w-full h-full bg-gradient-to-br from-secondary to-muted" />
                   )}
                   <div className="absolute top-3 right-3">
-                    <span className="bg-accent/95 text-white text-[9px] font-bold tracking-widest uppercase px-3 py-1.5 rounded-full">
+                    <span className="bg-accent/95 text-white text-[9px] font-bold uppercase px-3 py-1.5 rounded-full">
                       أخبار
                     </span>
                   </div>

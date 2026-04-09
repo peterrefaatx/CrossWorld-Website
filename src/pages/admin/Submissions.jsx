@@ -54,7 +54,7 @@ export default function Submissions() {
     <div className="space-y-5">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-[#1c1c1e] tracking-tight">طلبات التواصل</h1>
+          <h1 className="text-2xl font-bold text-[#1c1c1e]">طلبات التواصل</h1>
           <p className="text-sm text-gray-400 mt-0.5">جميع الطلبات المرسلة عبر نموذج التواصل</p>
         </div>
         <div className="text-xs font-medium text-gray-400 bg-white border border-gray-200 px-4 py-2 rounded-xl shadow-sm">

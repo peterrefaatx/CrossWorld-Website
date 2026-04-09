@@ -31,7 +31,7 @@ export default function About() {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="w-8 h-[1px] bg-accent" />
-              <span className="text-[11px] font-cairo tracking-[4px] uppercase text-accent font-medium">
+              <span className="text-[11px] font-cairo uppercase text-accent font-medium">
                 من نحن
               </span>
             </div>

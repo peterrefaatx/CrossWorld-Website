@@ -65,7 +65,7 @@ export default function Testimonials() {
   return (
     <div className="space-y-5">
       <div>
-        <h1 className="text-2xl font-bold text-[#1c1c1e] tracking-tight">التقييمات</h1>
+        <h1 className="text-2xl font-bold text-[#1c1c1e]">التقييمات</h1>
         <p className="text-sm text-gray-400 mt-0.5">إدارة تقييمات العملاء</p>
       </div>
 

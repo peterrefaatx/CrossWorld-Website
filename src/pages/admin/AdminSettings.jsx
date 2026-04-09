@@ -108,7 +108,7 @@ export default function AdminSettings() {
   return (
     <div className="max-w-4xl space-y-5">
       <div>
-        <h1 className="text-2xl font-bold text-[#1c1c1e] tracking-tight">الإعدادات</h1>
+        <h1 className="text-2xl font-bold text-[#1c1c1e]">الإعدادات</h1>
         <p className="text-sm text-gray-400 mt-0.5">إعدادات الحساب والنظام</p>
       </div>
 
@@ -116,7 +116,7 @@ export default function AdminSettings() {
       {user?.role === 'admin' && (
         <div className="bg-white rounded-2xl shadow-[0_1px_3px_rgba(0,0,0,0.06)] overflow-hidden">
           <div className="px-6 py-4 border-b border-gray-50 flex items-center justify-between">
-            <span className="text-xs font-semibold text-gray-300 tracking-widest uppercase">Users Management</span>
+            <span className="text-xs font-semibold text-gray-300 uppercase">Users Management</span>
             <button
               onClick={handleCreateUser}
               className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#e67e22] text-white hover:bg-[#d35400] transition text-xs font-medium"
@@ -171,7 +171,7 @@ export default function AdminSettings() {
       {/* Hero Section Settings - Admin Only */}
       {user?.role === 'admin' && (
         <div className="bg-white rounded-2xl shadow-[0_1px_3px_rgba(0,0,0,0.06)] overflow-hidden">
-          <div className="px-6 py-4 border-b border-gray-50 text-xs font-semibold text-gray-300 tracking-widest uppercase">Hero Section</div>
+          <div className="px-6 py-4 border-b border-gray-50 text-xs font-semibold text-gray-300 uppercase">Hero Section</div>
           <div className="p-5 space-y-4">
             <div>
               <label className="block text-xs font-medium text-gray-400 mb-2">السطر الأول من العنوان</label>
@@ -229,7 +229,7 @@ export default function AdminSettings() {
 
       {/* Account */}
       <div className="bg-white rounded-2xl shadow-[0_1px_3px_rgba(0,0,0,0.06)] overflow-hidden">
-        <div className="px-6 py-4 border-b border-gray-50 text-xs font-semibold text-gray-300 tracking-widest uppercase">Account</div>
+        <div className="px-6 py-4 border-b border-gray-50 text-xs font-semibold text-gray-300 uppercase">Account</div>
         <div className="p-5 space-y-4">
           <div className="flex items-center gap-4">
             <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#e67e22] to-[#f39c12] flex items-center justify-center text-white text-xl font-bold shadow-sm">
@@ -256,7 +256,7 @@ export default function AdminSettings() {
 
       {/* Contact Info */}
       <div className="bg-white rounded-2xl shadow-[0_1px_3px_rgba(0,0,0,0.06)] overflow-hidden">
-        <div className="px-6 py-4 border-b border-gray-50 text-xs font-semibold text-gray-300 tracking-widest uppercase">Business Info</div>
+        <div className="px-6 py-4 border-b border-gray-50 text-xs font-semibold text-gray-300 uppercase">Business Info</div>
         <div className="p-5 space-y-3">
           {[
             { label: "WhatsApp", value: "+34 604 811 874" },
