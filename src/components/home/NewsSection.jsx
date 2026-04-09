@@ -24,7 +24,10 @@ export default function NewsSection() {
       })
       .catch(err => {
         console.error('Failed to load articles:', err);
-        setError(err.message || 'Unknown error');
+        const errorMsg = err.status 
+          ? `HTTP ${err.status}: ${err.message}` 
+          : err.message || 'Unknown error';
+        setError(errorMsg);
         setLoading(false);
       });
   }, []);
