@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Users } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -72,6 +72,28 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <MapPin className="w-4 h-4 text-accent" />
                 <span className="text-sm text-white/50">Madrid, España</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Facebook className="w-4 h-4 text-accent" />
+                <a 
+                  href="https://www.facebook.com/crossworldspain/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-sm text-white/50 hover:text-accent transition-colors"
+                >
+                  صفحتنا على فيسبوك
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <Users className="w-4 h-4 text-accent" />
+                <a 
+                  href="https://www.facebook.com/groups/808772868210091" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-sm text-white/50 hover:text-accent transition-colors"
+                >
+                  مجموعتنا على فيسبوك
+                </a>
               </div>
             </div>
           </div>
