@@ -3,11 +3,11 @@ import { api } from "@/api/apiClient";
 import { Link } from "react-router-dom";
 import SectionHeader from "../ui/SectionHeader";
 import { ArrowLeft, ArrowRight, Calendar } from "lucide-react";
-import { motion } from "framer-motion";
 
 export default function NewsSection() {
   const [articles, setArticles] = useState([]);
   const [idx, setIdx] = useState(0);
+  const [perView, setPerView] = useState(3);
   const trackRef = useRef(null);
 
   useEffect(() => {
@@ -21,9 +21,19 @@ export default function NewsSection() {
       });
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setPerView(window.innerWidth < 768 ? 1 : 3);
+      setIdx(0); // Reset to first slide on resize
+    };
+    
+    handleResize(); // Set initial value
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   if (!articles.length) return null;
 
-  const perView = typeof window !== "undefined" && window.innerWidth < 768 ? 1 : 3;
   const max = Math.max(0, articles.length - perView);
 
   const prev = () => setIdx(i => Math.max(0, i - 1));
@@ -32,39 +42,40 @@ export default function NewsSection() {
   return (
     <section dir="rtl" className="pt-6 pb-12 lg:pt-8 lg:pb-16 bg-secondary/40" id="news">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="flex items-end justify-between mb-12">
+        <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-8 gap-4">
           <SectionHeader
             tag="آخر الأخبار"
             title="أخبار ومستجدات"
             description="آخر التحديثات القانونية والمعلومات المهمة لعام 2026."
           />
-          <div className="flex gap-2 mb-4">
-            <button
-              onClick={prev}
-              disabled={idx === 0}
-              className="w-10 h-10 rounded-full border border-border bg-card flex items-center justify-center hover:bg-accent hover:border-accent hover:text-white transition-all disabled:opacity-30 disabled:cursor-not-allowed"
-            >
-              <ArrowRight className="w-4 h-4" />
-            </button>
-            <button
-              onClick={next}
-              disabled={idx >= max}
-              className="w-10 h-10 rounded-full border border-border bg-card flex items-center justify-center hover:bg-accent hover:border-accent hover:text-white transition-all disabled:opacity-30 disabled:cursor-not-allowed"
-            >
-              <ArrowLeft className="w-4 h-4" />
-            </button>
-          </div>
+          {articles.length > perView && (
+            <div className="flex gap-2">
+              <button
+                onClick={prev}
+                disabled={idx === 0}
+                className="w-10 h-10 rounded-full border border-border bg-card flex items-center justify-center hover:bg-accent hover:border-accent hover:text-white transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+              >
+                <ArrowRight className="w-4 h-4" />
+              </button>
+              <button
+                onClick={next}
+                disabled={idx >= max}
+                className="w-10 h-10 rounded-full border border-border bg-card flex items-center justify-center hover:bg-accent hover:border-accent hover:text-white transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+              >
+                <ArrowLeft className="w-4 h-4" />
+              </button>
+            </div>
+          )}
         </div>
 
         {/* Track */}
         <div className="overflow-hidden">
-          <motion.div
+          <div
             ref={trackRef}
-            className="flex gap-5"
-            animate={{ 
-              x: `-${idx * (100 / perView)}%`
+            className="flex gap-5 transition-transform duration-500 ease-out"
+            style={{ 
+              transform: `translateX(-${idx * (100 / perView)}%)`
             }}
-            transition={{ type: "spring", stiffness: 300, damping: 30 }}
           >
             {articles.map(a => (
               <Link
@@ -108,7 +119,7 @@ export default function NewsSection() {
                 </div>
               </Link>
             ))}
-          </motion.div>
+          </div>
         </div>
 
         {/* Dots */}
