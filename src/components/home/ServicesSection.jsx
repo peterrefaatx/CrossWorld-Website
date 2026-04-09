@@ -9,7 +9,7 @@ const services = [
     title: "تأشيرة الرحل الرقميين",
     desc: "للعاملين عن بُعد والمستقلين — إقامة قانونية في إسبانيا مع الاحتفاظ بعملائك خارجها.",
     path: "/nomadas-digitales",
-    image: "/images/service-nolucrativa.jpg",
+    image: "/images/service-nomadas.png",
     active: true,
   },
   {
