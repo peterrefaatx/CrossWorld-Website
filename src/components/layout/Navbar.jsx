@@ -50,7 +50,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-20">
             {/* Brand */}
             <Link to="/" className="flex items-center gap-2">
-              <img src="/images/logo png.png" alt="CrossWorld" className="h-10 sm:h-14 w-auto" />
+              <img src="/images/logo png.png" alt="CrossWorld" className="h-9 sm:h-12 w-auto" />
             </Link>
 
             {/* Desktop Nav */}
@@ -157,7 +157,7 @@ export default function Navbar() {
               className="fixed top-0 right-0 bottom-0 w-80 bg-white z-50 shadow-2xl flex flex-col"
             >
               <div className="p-6 border-b border-border">
-                <img src="/images/logo png.png" alt="CrossWorld" className="h-10 w-auto" />
+                <img src="/images/logo png.png" alt="CrossWorld" className="h-9 w-auto" />
               </div>
               <ul className="flex-1 p-6 space-y-1">
                 {navLinks.map((link) =>
