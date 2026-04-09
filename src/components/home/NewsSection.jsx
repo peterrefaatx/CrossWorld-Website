@@ -14,7 +14,7 @@ export default function NewsSection() {
     setLoading(true);
     api.articles.getAll()
       .then(data => {
-        console.log('Articles loaded:', data);
+        console.log('Articles loaded successfully:', data);
         if (data && data.length > 0) {
           setArticles(data.slice(0, 9));
         } else {
@@ -24,7 +24,7 @@ export default function NewsSection() {
       })
       .catch(err => {
         console.error('Failed to load articles:', err);
-        setError(err.message);
+        setError(err.message || 'Unknown error');
         setLoading(false);
       });
   }, []);
